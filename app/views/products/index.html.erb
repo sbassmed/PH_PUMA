@@ -11,6 +11,7 @@
           <th>Nombre</th>
           <th>URL</th>
           <th>Descripción</th>
+          <td><%= link_to "Editar", edit_product_path(product) %></td>
         </tr>
         <% @products.each do |product| %>
           <tr>
