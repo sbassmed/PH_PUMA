@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   #ruta para mostrar detalles de un id
   get '/products/:id' ,to: 'products#show' , as: 'product'
   #ruta editar product
-  get '/products/:id/edit' ,to: 'products#edit'
+  get '/products/:id/edit' ,to: 'products#edit', as: 'edit_product'
   #
   patch '/products/:id', to: 'products#update'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
