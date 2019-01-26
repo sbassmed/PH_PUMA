@@ -3,6 +3,6 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
   def new
-      @products = Product.new
+      @product = Product.new
   end
 end
