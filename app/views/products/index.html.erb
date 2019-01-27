@@ -8,8 +8,14 @@
           <div class="product-details">
             <span class="product-title"><%= link_to product.name, product %></span>
             <span class="product-description"><%= product.description %></span>
+            <td>
+              <% if signed_in? %>
+                <%= link_to "Editar", edit_product_path(product) %>
+                <%= link_to "Eliminar", product, method: :delete, data: { confirm: "¿Estás seguro de eliminar este producto?" } %>
+              <% end %>
+            </td>
+            </div>
           </div>
-        </div>
         <% end %>
       </div>
     </div>
