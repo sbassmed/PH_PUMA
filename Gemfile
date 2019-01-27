@@ -7,6 +7,7 @@ ruby '2.4.1'
 gem 'rails', '~> 5.2.2'
 gem 'bootstrap-sass', '~> 3.4.0'
 gem 'jquery-rails', '~> 4.3', '>= 4.3.3'
+gem "paperclip", "~> 6.0.0"
 
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
