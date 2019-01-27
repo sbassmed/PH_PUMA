@@ -1,4 +1,7 @@
 class ProductsController < ApplicationController
+
+before_action :private_access, except: [:index, :show]
+
   def index
     @products = Product.all
   end
@@ -29,9 +32,9 @@ class ProductsController < ApplicationController
   end
   def destroy
     @product = Product.find(params[:id])
-    product.destroy
+    @product.destroy
 
-    redirect_to products_path , notice: "El producto fue eliminado" 
+    redirect_to products_path , notice: "El producto fue eliminado"
   end
     private
     def product_params
